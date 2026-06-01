@@ -3,9 +3,9 @@ name: rutebayar-agent-contributor
 description: Operate and extend Rute Bayar, the Go CLI and webhook daemon for Indonesian payment gateways. Use when setting up sandbox or production Rute Bayar flows, helping AI Agents create invoices and verify payments through the rutebayar CLI, testing webhooks/forwarding/reconciliation, preparing releases, or contributing a new provider adapter such as DOKU, Flip Business, Duitku, Xendit, or Midtrans.
 ---
 
-# Rute Bayar Agent & Contributor
+# Rute Bayar AI Agent & Contributor
 
-Use this skill for Rute Bayar work where correctness depends on the project's CLI, daemon, provider model, sandbox/prod differences, and contribution conventions.
+Use this skill for AI Agent and contributor work where correctness depends on Rute Bayar's CLI, daemon, provider model, sandbox/prod differences, and contribution conventions.
 
 ## Start Here
 

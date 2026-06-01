@@ -1,17 +1,17 @@
-# Rute Bayar Agent & Contributor Skill
+# Rute Bayar AI Agent & Contributor Skill
 
 [![skills.sh](https://skills.sh/b/pendig/rutebayar-agent-contributor)](https://skills.sh/pendig/rutebayar-agent-contributor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-Codex skill for operating and contributing to [Rute Bayar](https://github.com/pendig/rute-bayar), an open source payment router CLI and webhook daemon for Indonesian payment gateways.
+AI Agent skill for operating and contributing to [Rute Bayar](https://github.com/pendig/rute-bayar), an open source payment router CLI and webhook daemon for Indonesian payment gateways.
 
-This skill helps AI agents and contributors work with Rute Bayar consistently across sandbox, production, webhook forwarding, release, and provider integration workflows.
+This skill helps AI agents, coding assistants, automation agents, and human contributors work with Rute Bayar consistently across sandbox, production, webhook forwarding, release, and provider integration workflows.
 
 ## What This Skill Helps With
 
 - Operate Rute Bayar in sandbox or production.
 - Use `rutebayar` as a safe billing tool boundary for AI Agent workflows.
-- Create payment links/invoices and verify payment status.
+- Create payment links or invoices and verify payment status.
 - Set up webhook daemon, health checks, replay, and pass-through forwarding.
 - Add or maintain payment provider adapters such as Xendit, Midtrans, DOKU, Flip Business, and Duitku.
 - Prepare PRs, CI checks, E2E sandbox validation, releases, and Homebrew distribution.
@@ -24,13 +24,19 @@ Install with the skills.sh CLI:
 npx skills add pendig/rutebayar-agent-contributor
 ```
 
-For Codex, restart Codex after installing so the new skill can be discovered.
+The skills.sh CLI can install the skill into supported AI agent environments. Restart or reload your agent after installing if it does not pick up new skills automatically.
 
-Manual install:
+Manual install for agents that read local `SKILL.md` folders:
 
 ```bash
-mkdir -p ~/.codex/skills/rutebayar-agent-contributor
-cp -R SKILL.md agents references ~/.codex/skills/rutebayar-agent-contributor/
+mkdir -p ~/.agent-skills/rutebayar-agent-contributor
+cp -R SKILL.md agents references ~/.agent-skills/rutebayar-agent-contributor/
+```
+
+For Codex specifically, the local skill directory is usually:
+
+```bash
+~/.codex/skills/rutebayar-agent-contributor
 ```
 
 ## Usage
@@ -71,7 +77,8 @@ references/release-ci.md
 
 - Rute Bayar: https://github.com/pendig/rute-bayar
 - Website: https://rutebayar.id
-- skills.sh page: https://skills.sh/pendig/rutebayar-agent-contributor
+- skills.sh repo page: https://skills.sh/pendig/rutebayar-agent-contributor
+- skills.sh skill page: https://skills.sh/pendig/rutebayar-agent-contributor/rutebayar-agent-contributor
 
 ## License
 

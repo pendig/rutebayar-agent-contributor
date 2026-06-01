@@ -148,7 +148,7 @@ Update the smallest docs set that matches the change:
 
 ## PR Hygiene
 
-- Use a branch name with `codex/` unless the user asks otherwise.
+- Use the repository's preferred branch naming convention. For generic contributors, prefer clear prefixes such as `feat/`, `fix/`, or `docs/`; for Codex-driven work in repos that request it, `codex/` is acceptable.
 - Keep PR body non-empty and include verification commands.
 - Check review comments with GitHub CLI before merging.
 - Resolve review threads only after fixes are committed or the comment is clearly non-actionable.

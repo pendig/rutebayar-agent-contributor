@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve the Rute Bayar Agent & Contributor skill.
+Thanks for helping improve the Rute Bayar AI Agent & Contributor skill.
 
 ## Development Flow
 
@@ -12,13 +12,13 @@ Thanks for helping improve the Rute Bayar Agent & Contributor skill.
 
 ## Validate
 
-Use the Skill Creator validator when available:
+Use an Agent Skills validator when available. For Codex users with the Skill Creator skill installed:
 
 ```bash
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py .
 ```
 
-If your Python environment does not have `PyYAML`, use a temporary virtual environment:
+If that validator is available but your Python environment does not have `PyYAML`, use a temporary virtual environment:
 
 ```bash
 python3 -m venv /tmp/rutebayar-skill-validate

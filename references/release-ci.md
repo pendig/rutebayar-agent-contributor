@@ -44,12 +44,12 @@ Recommended flow:
 ```bash
 git switch main
 git pull --ff-only
-git switch -c codex/<task-name>
+git switch -c feat/<task-name>
 # edit, test
 git add <files>
 git commit -m "<scope>: <summary>"
-git push -u origin codex/<task-name>
-gh pr create --base main --head codex/<task-name> --title "<title>" --body-file <body-file>
+git push -u origin feat/<task-name>
+gh pr create --base main --head feat/<task-name> --title "<title>" --body-file <body-file>
 ```
 
 Before merge:

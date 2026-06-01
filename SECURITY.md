@@ -8,7 +8,7 @@ Do not disclose provider credentials, webhook tokens, sandbox keys, production k
 
 ## Scope
 
-This repository contains an AI agent skill, not the Rute Bayar application runtime itself. Security-sensitive guidance still matters because the skill can influence how agents handle payment credentials and webhook operations.
+This repository contains an AI Agent skill, not the Rute Bayar application runtime itself. Security-sensitive guidance still matters because the skill can influence how agents handle payment credentials and webhook operations.
 
 In scope:
 
