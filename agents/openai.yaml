@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rute Bayar Agent & Contributor"
+  short_description: "Operate and extend Rute Bayar workflows"
+  default_prompt: "Use $rutebayar-agent-contributor to operate Rute Bayar, test sandbox or production payment flows, or contribute a provider adapter."
