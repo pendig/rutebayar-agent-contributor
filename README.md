@@ -1,6 +1,6 @@
 # Rute Bayar AI Agent & Contributor Skill
 
-[![skills.sh](https://skills.sh/b/pendig/rutebayar-agent-contributor)](https://skills.sh/pendig/rutebayar-agent-contributor)
+[![skills.sh](https://skills.sh/b/pendig/rutebayar-agent-contributor)](https://www.skills.sh/pendig/rutebayar-agent-contributor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 AI Agent skill for operating and contributing to [Rute Bayar](https://github.com/pendig/rute-bayar), an open source payment router CLI and webhook daemon for Indonesian payment gateways.
@@ -77,8 +77,8 @@ references/release-ci.md
 
 - Rute Bayar: https://github.com/pendig/rute-bayar
 - Website: https://rutebayar.id
-- skills.sh repo page: https://skills.sh/pendig/rutebayar-agent-contributor
-- skills.sh skill page: https://skills.sh/pendig/rutebayar-agent-contributor/rutebayar-agent-contributor
+- skills.sh page: https://www.skills.sh/pendig/rutebayar-agent-contributor
+- skills.sh skill detail: https://www.skills.sh/pendig/rutebayar-agent-contributor/rutebayar-agent-contributor
 
 ## License
 

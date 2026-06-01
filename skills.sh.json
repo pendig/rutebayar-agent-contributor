@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "Rute Bayar",
-      "description": "Skill for operating and contributing to Rute Bayar payment routing workflows.",
+      "description": "AI Agent skill for operating Rute Bayar in sandbox or production, creating invoices, verifying payment state, testing webhooks, and contributing payment provider adapters.",
       "skills": [
         "rutebayar-agent-contributor"
       ]
