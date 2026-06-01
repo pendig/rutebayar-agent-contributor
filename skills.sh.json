@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Rute Bayar",
+      "description": "Skill for operating and contributing to Rute Bayar payment routing workflows.",
+      "skills": [
+        "rutebayar-agent-contributor"
+      ]
+    }
+  ]
+}
