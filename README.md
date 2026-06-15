@@ -5,7 +5,7 @@
 
 AI Agent skill for operating and contributing to [Rute Bayar](https://github.com/pendig/rute-bayar), an open source payment router CLI and webhook daemon for Indonesian payment gateways.
 
-This skill helps AI agents, coding assistants, automation agents, and human contributors work with Rute Bayar consistently across sandbox, production, webhook forwarding, release, and provider integration workflows.
+This skill helps AI agents, coding assistants, automation agents, and human contributors work with Rute Bayar consistently across sandbox, production, webhook forwarding, API mode, release, and provider integration workflows.
 
 ## What This Skill Helps With
 
@@ -15,6 +15,7 @@ This skill helps AI agents, coding assistants, automation agents, and human cont
 - Set up webhook daemon, health checks, replay, and pass-through forwarding.
 - Add or maintain payment provider adapters such as Xendit, Midtrans, DOKU, Flip Business, and Duitku.
 - Prepare PRs, CI checks, E2E sandbox validation, releases, and Homebrew distribution.
+- Help with API mode raw provider calls (`rutebayar api <provider>`) and operator safety checks for API alias/testing workflows.
 
 ## Install
 
@@ -53,6 +54,11 @@ Use $rutebayar-agent-contributor to add a new provider adapter for Flip Business
 
 ```text
 Use $rutebayar-agent-contributor to review whether a Rute Bayar release is ready.
+```
+
+```text
+Use $rutebayar-agent-contributor to validate a direct provider API flow via API mode.
+Use $rutebayar-agent-contributor to list API mode operations for a provider before integration.
 ```
 
 ## Skill Layout

@@ -53,6 +53,11 @@ rutebayar onboard doku \
   --secret-key "$DOKU_SECRET_KEY" \
   --webhook-path /webhooks/doku \
   --environment sandbox
+
+rutebayar onboard ipaymu \
+  --va "$IPAYMU_VA" \
+  --api-key "$IPAYMU_API_KEY" \
+  --environment sandbox
 ```
 
 Test provider connectivity:
@@ -61,6 +66,7 @@ Test provider connectivity:
 rutebayar provider test xendit --environment sandbox
 rutebayar provider test midtrans --environment sandbox
 rutebayar provider test doku --environment sandbox
+rutebayar provider test ipaymu --environment sandbox
 ```
 
 For DOKU, a dummy check-status probe may return `404` while still proving signed auth reaches DOKU correctly.
@@ -101,10 +107,38 @@ rutebayar pay create \
   --amount 15000 \
   --notification-url https://<public-domain>/webhooks/doku
 
+rutebayar pay create \
+  --provider ipaymu \
+  --method redirect \
+  --reference rb-ipaymu-001 \
+  --amount 15000 \
+  --notification-url https://<public-domain>/webhooks/ipaymu
+
 rutebayar pay status --provider doku --reference rb-doku-001
 ```
 
 Xendit Payment Sessions do not support per-payment webhook URL override. Configure the global webhook URL in Xendit Dashboard and use Rute Bayar forwarding for application-specific delivery.
+
+### API Mode (raw provider APIs)
+
+Use `rutebayar api` when you need direct calls to official provider endpoints:
+
+```bash
+rutebayar api --help
+rutebayar api <provider> --help
+rutebayar api midtrans --environment sandbox --operation status --path-param order_id=rb-demo-001
+rutebayar api xendit --environment sandbox --operation auth-balance
+rutebayar api doku --environment sandbox --operation order-status --path-param invoice_number_or_request_id=INV-001
+rutebayar api ipaymu --environment sandbox --operation payment-channels --method GET
+```
+
+Recommended workflow:
+
+- Onboard and test the provider first (`rutebayar onboard ...`, `rutebayar provider test ...`).
+- Use `--operation` alias first; use `--path` only for endpoints not in alias list.
+- For sensitive endpoints, keep auth headers enabled by default and only use `--skip-auth` when intentionally testing unauthenticated behavior.
+- Validate output shape and headers before copying payloads for downstream automation.
+- Use `--base-url` only for controlled repro with known sandbox/proxy differences.
 
 ## Webhook Daemon
 
@@ -121,6 +155,7 @@ Endpoints:
 /webhooks/xendit
 /webhooks/midtrans
 /webhooks/doku
+/webhooks/ipaymu
 ```
 
 For public callback testing:
@@ -136,6 +171,7 @@ Set provider dashboards to:
 https://<public-domain>/webhooks/xendit
 https://<public-domain>/webhooks/midtrans
 https://<public-domain>/webhooks/doku
+https://<public-domain>/webhooks/ipaymu
 ```
 
 ## Forwarding

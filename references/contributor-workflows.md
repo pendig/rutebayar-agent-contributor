@@ -30,6 +30,7 @@ Provider packages are currently under:
 internal/provider/xendit/
 internal/provider/midtrans/
 internal/provider/doku/
+internal/provider/ipaymu/
 ```
 
 ## Provider Adapter Contract
@@ -58,6 +59,7 @@ Keep provider-specific request signing, payload shape, webhook signature logic, 
 8. Add refund/reconcile only when official APIs and credentials are clear.
 9. Add SQLite migrations only if existing generic tables are insufficient.
 10. Update docs and site changelog when user-facing behavior changes.
+11. Add API-mode alias definitions and operation mapping tests when raw-provider endpoints are touched.
 
 ## Status Mapping
 
@@ -119,6 +121,8 @@ For provider work, add focused unit tests for:
 - webhook event parsing
 - unsupported capability errors
 - refund/reconcile behavior when implemented
+- API-mode alias discovery and operation path matching
+- API-mode signed/unsigned auth flow behavior (`--skip-auth`)
 
 Then run:
 
@@ -140,6 +144,7 @@ Update the smallest docs set that matches the change:
 - `docs/provider-integration.md`
 - `docs/providers/<provider>-integration.md`
 - `docs/cli-onboarding.md`
+- `docs/api-mode-qa-mcp.md`
 - `docs/end-to-end-smoke.md`
 - `docs/operations-runbook.md`
 - `docs/release-readiness.md`

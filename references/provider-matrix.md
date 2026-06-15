@@ -9,6 +9,7 @@ Use this reference to avoid repeating decisions already made in Rute Bayar.
 | Xendit | Payment Sessions `POST /sessions` | Supported | `X-Callback-Token` when configured | Implemented | Per-payment webhook URL override is not available for Payment Sessions. Use dashboard webhook URL plus Rute Bayar forwarding. |
 | Midtrans | Core API, QRIS/bank transfer style flows | Supported | `order_id + status_code + gross_amount + server_key` signature | Implemented | Some flows support per-transaction notification override via `X-Override-Notification`. |
 | DOKU | Checkout `POST /checkout/v1/payment` | Check Status API | HMAC-SHA256 `Signature` header | Disabled | Refund needs Refund API/disbursement setup. Back Office notification URL must match active channels. |
+| iPaymu | API v2 payment endpoints | Supported (API mode aliases + raw calls) | Signature based on request body and shared secret | Disabled | Uses API mode for `payment-channels`, transaction status, and direct payment calls; full refund support remains unsupported. |
 
 ## DOKU Notes
 

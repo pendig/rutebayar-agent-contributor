@@ -93,7 +93,13 @@ gh release view vX.Y.Z --json tagName,name,url,isPrerelease,assets
 gh pr list --repo pendig/homebrew-tap --state open
 ```
 
-If a Homebrew tap PR is opened, verify the formula diff only bumps version and checksums, then merge it.
+```bash
+gh run list --workflow site-pages.yml --limit 5
+```
+
+Release docs/pages deploy should be validated against the same tag used for the GitHub Release.
+
+If a Homebrew tap PR is opened, verify the formula diff only bumps version/checksums, ensure `v#{version}` interpolation is preserved, then merge it after review approval.
 
 ## Release Readiness
 
